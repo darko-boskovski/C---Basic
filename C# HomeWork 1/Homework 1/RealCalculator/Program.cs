@@ -24,11 +24,11 @@ namespace RealCalculator
                         Console.WriteLine("The Result is:" + result);
                         break;
                     case '-':
-                       result= firstNumber - secondNumber;
+                        result = firstNumber - secondNumber;
                         Console.WriteLine("The Result is:" + result);
                         break;
                     case '*':
-                        result= firstNumber * secondNumber;
+                        result = firstNumber * secondNumber;
                         Console.WriteLine("The Result is:" + result);
                         break;
                     case '/':
