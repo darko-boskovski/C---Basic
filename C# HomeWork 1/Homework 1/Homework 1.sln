@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealCalculator", "RealCalculator\RealCalculator.csproj", "{B4A5F70C-2F21-47E8-93A8-FDDA9821EA31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AverageNumber", "AverageNumber\AverageNumber.csproj", "{1234A8DE-30E3-4522-9DC6-DAF7F94063BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swap Numbers", "Swap Numbers\Swap Numbers.csproj", "{FA28DB36-40BE-4CED-B7A8-B3AAE9B7459C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tik - Tak", "Tik - Tak\Tik - Tak.csproj", "{C28033AC-6211-41D9-B316-FA89DAC9FD9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4A5F70C-2F21-47E8-93A8-FDDA9821EA31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4A5F70C-2F21-47E8-93A8-FDDA9821EA31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4A5F70C-2F21-47E8-93A8-FDDA9821EA31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4A5F70C-2F21-47E8-93A8-FDDA9821EA31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1234A8DE-30E3-4522-9DC6-DAF7F94063BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1234A8DE-30E3-4522-9DC6-DAF7F94063BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1234A8DE-30E3-4522-9DC6-DAF7F94063BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1234A8DE-30E3-4522-9DC6-DAF7F94063BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA28DB36-40BE-4CED-B7A8-B3AAE9B7459C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA28DB36-40BE-4CED-B7A8-B3AAE9B7459C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA28DB36-40BE-4CED-B7A8-B3AAE9B7459C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA28DB36-40BE-4CED-B7A8-B3AAE9B7459C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C28033AC-6211-41D9-B316-FA89DAC9FD9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C28033AC-6211-41D9-B316-FA89DAC9FD9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C28033AC-6211-41D9-B316-FA89DAC9FD9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C28033AC-6211-41D9-B316-FA89DAC9FD9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20A4C0D8-D0E0-40C3-BCDC-E6ABC9A67562}
+	EndGlobalSection
+EndGlobal
