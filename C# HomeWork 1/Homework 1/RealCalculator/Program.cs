@@ -15,23 +15,25 @@ namespace RealCalculator
 
             if (isUserNumberSueccess && isUserNumberSueccess2 && isUserCharSueccess)
             {
+                int result = 0;
+
                 switch (userOperator)
                 {
                     case '+':
-                        int sumNumbers = firstNumber + secondNumber;
-                        Console.WriteLine("The Result is:" + sumNumbers);
+                        result = firstNumber + secondNumber;
+                        Console.WriteLine("The Result is:" + result);
                         break;
                     case '-':
-                        int substractNumbers = firstNumber - secondNumber;
-                        Console.WriteLine("The Result is:" + substractNumbers);
+                       result= firstNumber - secondNumber;
+                        Console.WriteLine("The Result is:" + result);
                         break;
                     case '*':
-                        int multiplyNumbers = firstNumber * secondNumber;
-                        Console.WriteLine("The Result is:" + multiplyNumbers);
+                        result= firstNumber * secondNumber;
+                        Console.WriteLine("The Result is:" + result);
                         break;
                     case '/':
-                        int devideNumbers = firstNumber / secondNumber;
-                        Console.WriteLine("The Result is:" + devideNumbers);
+                        result = firstNumber / secondNumber;
+                        Console.WriteLine("The Result is:" + result);
                         break;
                     default:
                         Console.WriteLine("Please enter valid operator");
