@@ -22,7 +22,7 @@ namespace Exercise_6
                     if (newName.Length < 3 || newName == "")
                     {
                         Console.WriteLine("Please Enter more than 3 letters");
-                            break;
+                        continue;
                     } else
                     { 
                         Array.Resize(ref namesArray, namesArray.Length + 1);
