@@ -122,11 +122,28 @@ namespace Homework_Methods_and_Strings
         static void RemoveExtraSpace(string userInput)
         {
 
-            string spaceCleared = userInput.Replace("&nbsp;", "").Trim();
-            char[] whiteSpace = new char[] { ' ' };
-            string[] split = spaceCleared.Split(whiteSpace, StringSplitOptions.RemoveEmptyEntries);
-            string compactedString = string.Join(" ", split);
-            Console.WriteLine(compactedString);
+
+
+            string result = "";
+
+            char[] textCharArr = userInput.ToCharArray();
+
+            char prevChar = ' ';
+            for (int i = 0; i < textCharArr.Length; i++)
+            {
+                char current = textCharArr[i];
+                if ((prevChar != ' ' || current != prevChar)) { 
+
+
+                result += current;
+                prevChar = current;
+            }
+
+            }
+
+            string spaceCleared = result.Replace("&nbsp;", "").Trim();
+
+            Console.WriteLine(spaceCleared);
 
 
         }
@@ -198,11 +215,11 @@ namespace Homework_Methods_and_Strings
                 "" +
                 "The&nbsp;&nbsp;&nbsp; best &nbsp;Lorem&nbsp; Ipsum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Generator in all the&nbsp; sea!&nbsp;&nbsp; Heave this &nbsp; scurvy copyfiller fer yar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; next&nbsp;&nbsp; adventure&nbsp; and cajol yar clients&nbsp;&nbsp; into walking  the plank with  ev'ry layout!&nbsp;&nbsp;&nbsp; Configure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  above, then get yer pirate ipsum...own the high seas,&nbsp;&nbsp;&nbsp; argh!";
 
-           RemoveExtraSpace(userInput1);
+            RemoveExtraSpace(userInput1);
 
             #endregion
 
             Console.ReadLine();
-        } 
+        }
     }
 }
