@@ -51,6 +51,7 @@ namespace MovieStoreLibrary
 
         public virtual void DisplayInfo()
         {
+            Console.WriteLine("---------------------------------------------");
             Console.Write($"Firstname: {FirstName}, Lastname: {LastName}, The Member is: {Role}, Registered on: {DateOfRegistration}, ");
         }
 

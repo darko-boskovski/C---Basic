@@ -62,28 +62,43 @@ namespace MovieStoreServices
 
             Movie selected = movies.Where(item => item.Title.ToLower() == userInput.ToLower()).FirstOrDefault();
 
-            if (selected == null) Console.WriteLine("There is no such movie in your renter Movie List");
+            if (selected == null)
+            {
+                Console.WriteLine("There is no such movie in your renter Movie List");
+                return;
+            }
 
             user.RentedMovies.Add(selected);
             rentedMovies.Add(selected);
             movies.Remove(selected);
+            Console.WriteLine($"You've rented the movie '{selected.Title}' ");
             Console.WriteLine("-------------------------");
         }
 
         public static void ReturnMovie(User user, List<Movie> movies, List<Movie> rentedMovies)
         {
             Console.WriteLine("---------------------------------------------");
+            
+            if(user.RentedMovies.Count == 0)
+            {
+                Console.WriteLine("No movies to return");
+                return;
+            }
             Console.WriteLine("Please Enter the Movie Name you would like to Return: ");
             SeeAvailableMovies(user.RentedMovies);
             string userInput = Console.ReadLine();
 
             Movie selected = user.RentedMovies.Where(item => item.Title.ToLower() == userInput.ToLower()).FirstOrDefault();
 
-            if (selected == null) Console.WriteLine("There is no such movie");
-
+            if (selected == null)
+            {
+                Console.WriteLine("There is no such movie");
+                return;
+            }
             user.RentedMovies.Remove(selected);
             movies.Add(selected);
             rentedMovies.Remove(selected);
+            Console.WriteLine($"You've returned the movie '{selected.Title}' ");
             Console.WriteLine("-------------------------");
 
         }
@@ -111,6 +126,7 @@ namespace MovieStoreServices
         public static void SeeAvailableMovies(List<Movie> movies)
         {
             Console.WriteLine("---------------------------------------------");
+
             int i = 1;
             movies.ForEach((x) =>
             {
@@ -368,13 +384,30 @@ namespace MovieStoreServices
 
             }
         }
+        public static void DisplayUserRentedMovies(User user)
+        {
+            if (user.RentedMovies.Count == 0)
+            {
+                Console.WriteLine("---------------------------------------------");
+                Console.WriteLine("You don't have any movie rented");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("The movies in your rented list are:");
+                Console.WriteLine("---------------------------------------------");
+                user.RentedMovies.ForEach(x => Console.WriteLine(x.Title));
+                return;
+            }
+        }
+
 
 
 
         public static bool UserInterface(User member, List<Movie> availableMovies, List<Movie> rentedMovies)
         {
             Console.WriteLine("---------------------------------------------");
-            Console.WriteLine("Choose:\n1)See Your Info \n2)See Available Movies \n3)Rent A Movie \n4)See Movies You've rented \n5) Return A Movie \n6)Exit to Main Menu");
+            Console.WriteLine("Choose:\n1)See Your Info \n2)See Available Movies \n3)Rent A Movie \n4)See Movies You've rented \n5)Return A Movie \n6)Exit to Main Menu");
             int choice;
             bool isNumber = int.TryParse(Console.ReadLine(), out choice);
             if (!isNumber)
@@ -394,8 +427,8 @@ namespace MovieStoreServices
                     RentMovie(member, availableMovies, rentedMovies);
                     return true;
                 case 4:
+                    DisplayUserRentedMovies(member);
                     Console.WriteLine("---------------------------------------------");
-                    member.RentedMovies.ForEach(x => Console.WriteLine(x.Title));
                     return true;
                 case 5:
                     ReturnMovie(member, availableMovies, rentedMovies);
