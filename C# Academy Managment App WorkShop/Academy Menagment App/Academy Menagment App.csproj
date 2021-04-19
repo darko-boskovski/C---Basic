@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Academy_Menagment_App</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Academy_Library\Academy_Menagment_Library.csproj" />
+    <ProjectReference Include="..\Academy_Menagment_Services\Academy_Menagment_Services.csproj" />
+  </ItemGroup>
+
+</Project>
